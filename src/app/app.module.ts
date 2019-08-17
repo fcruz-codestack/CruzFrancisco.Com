@@ -14,6 +14,17 @@ import { HomeComponent } from './views/home/home.component';
 import { MainNavComponent } from './_shared/components/main-nav/main-nav.component';
 import { SideNavComponent } from './_shared/components/side-nav/side-nav.component';
 import { CustomDialogComponent } from './_shared/components/custom-dialog/custom-dialog.component';
+import { AboutComponent } from './views/about/about.component';
+import { ProjectsComponent } from './views/projects/projects.component';
+import { ResumeComponent } from './views/resume/resume.component';
+import { ContactComponent } from './views/contact/contact.component';
+import { CrmComponent } from './views/projects/crm/crm.component';
+import { InventoryComponent } from './views/projects/inventory/inventory.component';
+import { SitesComponent } from './views/projects/sites/sites.component';
+import { WeatherComponent } from './views/projects/weather/weather.component';
+import { SportsComponent } from './views/projects/sports/sports.component';
+import { TriviaComponent } from './views/projects/trivia/trivia.component';
+import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +32,18 @@ import { CustomDialogComponent } from './_shared/components/custom-dialog/custom
     HomeComponent,
     MainNavComponent,
     SideNavComponent,
-    CustomDialogComponent
+    CustomDialogComponent,
+    AboutComponent,
+    ProjectsComponent,
+    ResumeComponent,
+    ContactComponent,
+    CrmComponent,
+    InventoryComponent,
+    SitesComponent,
+    WeatherComponent,
+    SportsComponent,
+    TriviaComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
