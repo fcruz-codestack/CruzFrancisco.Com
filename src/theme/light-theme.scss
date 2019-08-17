@@ -1,0 +1,29 @@
+@import '~@angular/material/theming';
+@import './colors.scss';
+
+@mixin light-theme($theme) {
+    $accent: map-get($theme, accent);
+    $background: map-get($theme, background);
+    $background-color: mat-color($background, card);
+    body, html {
+      background: $light-header-background;
+    }
+    .header {
+        background: $light-header-background;
+      }
+      .content-title {
+        background-color: $light-title-background;
+      }
+      .content-title-mobile {
+        background-color: $light-title-background;
+      }
+      .sidenav {
+        background-color: $light-background;
+      }
+      .content-region {
+        background-color: $light-body-background;
+        .footer {
+          background: $light-header-background;
+        }
+      }
+  }

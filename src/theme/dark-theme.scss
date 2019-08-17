@@ -1,0 +1,29 @@
+@import '~@angular/material/theming';
+@import './colors.scss';
+
+@mixin dark-theme($theme) {
+    $accent: map-get($theme, accent);
+    $background: map-get($theme, background);
+    $background-color: mat-color($background, card);
+    body, html {
+      background: $dark-header-background;
+    }
+    .header {
+        background: $dark-header-background;
+      }
+      .content-title {
+        background-color: $dark-title-background;
+      }
+      .content-title-mobile {
+        background-color: $dark-title-background;
+      }
+      .sidenav {
+        background-color: $dark-background;
+      }
+      .content-region {
+        background-color: $dark-body-background;
+        .footer {
+          background: $dark-header-background;
+        }
+      }
+  }

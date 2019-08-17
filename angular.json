@@ -28,7 +28,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/theme/colors.scss",
+              "src/theme/material-themes.scss",
+              "src/theme/light-theme.scss",
+              "src/theme/dark-theme.scss",
+              "src/theme/styles.scss"
             ],
             "scripts": []
           },
@@ -88,7 +92,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/theme/colors.scss",
+              "src/theme/material-themes.scss",
+              "src/theme/light-theme.scss",
+              "src/theme/dark-theme.scss",
+              "src/theme/styles.scss"
             ],
             "scripts": []
           }

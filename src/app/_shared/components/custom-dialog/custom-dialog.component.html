@@ -1,0 +1,7 @@
+<h2 mat-dialog-title>{{data.title}}</h2>
+<mat-dialog-content>{{data.body}}</mat-dialog-content>
+<mat-dialog-actions>
+  <span class="flex"></span>
+  <button *ngIf="data.cancelButton !== ''" mat-button mat-dialog-close>{{data.cancelButton}}</button>
+  <button *ngIf="data.confirmButton !== ''" mat-button (click)="onConfirmClick()" cdkFocusInitial>{{data.confirmButton}}</button>
+</mat-dialog-actions>

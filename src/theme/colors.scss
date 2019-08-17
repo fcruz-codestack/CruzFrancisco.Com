@@ -1,0 +1,13 @@
+$dark-background:  #568CB9;
+$dark-header-background: #0b161f;
+$dark-primary-background:  lighten($dark-header-background, 3%);
+$dark-title-background:  lighten($dark-header-background, 25%);
+$dark-body-background:  lighten($dark-header-background, 30%);
+$dark-theme-font: #ffffff;
+
+$light-background:  #ffffff;
+$light-header-background:  rgb(204, 216, 227);
+$light-primary-background:  lighten($light-header-background, 3%);
+$light-title-background:  lighten($light-header-background, 15%);
+$light-body-background:  lighten($light-header-background, 40%);
+$light-theme-font: #0b161f;

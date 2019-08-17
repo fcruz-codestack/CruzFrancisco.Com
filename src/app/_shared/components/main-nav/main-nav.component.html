@@ -1,0 +1,8 @@
+<button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item class="menu-button" (click)="toggleTheme();">Show {{ themeTitle }} Theme</button>
+    <button mat-menu-item class="menu-button" (click)="showDialog();">Account</button>
+    <button mat-menu-item class="menu-button">Sign Out</button>
+  </mat-menu>

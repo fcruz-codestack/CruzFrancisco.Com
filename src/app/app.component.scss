@@ -1,0 +1,60 @@
+.content-title {
+    margin-top:64px;
+  }
+  
+  .header-logo {
+    width:160px;
+    margin: 15px 0 0 18px;
+  }
+  
+  .content-title-mobile {
+    margin-top:56px;
+  }
+  
+  .sidenav {
+    width: 200px;
+    position: fixed;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  .mat-toolbar.mat-primary {
+    top: 0;
+    z-index: 1;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 999999 !important;
+  }
+  
+  .header > app-main-nav {
+    z-index: 99999989 !important;
+    position: fixed !important;
+    right: 0;
+  }
+  
+  .component-content {
+    margin: 15px;
+    min-height: 636px;
+  }
+  
+  .footer {
+    font-weight: 100;
+    box-sizing: border-box;
+    padding: 35px 30px 30px 30px;
+    .copyright {
+      font-weight: bold;
+    }
+    fa {
+      margin-left: 20px;
+    }
+  }
+  
+  .search {
+    margin-left: 5px !important;
+    font-size: 95% !important;
+  }
