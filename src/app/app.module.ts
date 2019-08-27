@@ -6,6 +6,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MaterialModule} from './material/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -53,7 +54,9 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
     FormsModule,
     ReactiveFormsModule,
     MatNativeDateModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
