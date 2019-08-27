@@ -3,17 +3,28 @@
       <mat-sidenav #drawer class="sidenav" [fixedInViewport]="(isHandset$ | async)"
         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
         [opened]="!(isHandset$ | async)" mode="side" opened role="region">
-        <div  layout="row" layout-align="center center">
-          <img alt="Me" src='../assets/img/fc.png' style='width: 5rem;'>
-        </div>
-      <app-side-nav></app-side-nav>
+
+        <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="2.5rem" class="card">
+            <mat-card >
+              <mat-card-header>
+                <!-- <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Francisco Cruz</mat-card-title> -->
+              </mat-card-header>
+              <img mat-card-image src="../assets/img/fc.png" alt="Photo of Me" style='width: 5rem;' class="image">
+              <mat-card-content>
+                <app-side-nav></app-side-nav>
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+      <!-- <app-side-nav></app-side-nav> -->
 
       </mat-sidenav>
       <mat-sidenav-content role="region" class="content-region">
         <mat-toolbar class="header">
           <button type="button" aria-label="Toggle side menu" mat-icon-button (click)="drawer.toggle()"
             *ngIf="isHandset$ | async">
-            <mat-icon aria-label="Side menu toggle icon">menu</mat-icon>
+            <mat-icon aria-label="Side menu toggle icon">view_list</mat-icon>
           </button>
           <img alt="logo" src='../assets/img/logo.png' style='width: 3rem;'>
           <!-- <mat-form-field class="search">

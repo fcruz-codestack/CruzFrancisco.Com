@@ -1,0 +1,12 @@
+.hide {
+    display: none;
+}
+
+.show {
+    display: flexbox;
+    background-color: transparent;
+}
+
+.dark-theme .mat-drawer-backdrop.mat-drawer-shown {
+    background-color: transparent;
+}

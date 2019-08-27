@@ -1,8 +1,48 @@
-<button mat-button [matMenuTriggerFor]="menu">
-    <mat-icon>account_circle</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item class="menu-button" (click)="toggleTheme();">Show {{ themeTitle }} Theme</button>
-    <button mat-menu-item class="menu-button" (click)="showDialog();">Account</button>
-    <button mat-menu-item class="menu-button">Sign Out</button>
-  </mat-menu>
+<!-- <button mat-button [matMenuTriggerFor]="menu">
+  <mat-icon>account_circle</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item class="menu-button" (click)="toggleTheme();">Show {{ themeTitle }} Theme</button>
+  <button mat-menu-item class="menu-button" (click)="showDialog();">Account</button>
+  <button mat-menu-item class="menu-button">Sign Out</button>
+</mat-menu> -->
+<mat-sidenav-container>
+  <mat-sidenav #drawerRight class="sidenav" [fixedInViewport]="(isHandset$ | async)"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)" mode="side" closed role="region" position="end">
+    <mat-sidenav-container [ngClass]="(isHandset$ | async) ? 'show' : 'hide'">
+
+    </mat-sidenav-container>
+  </mat-sidenav>
+  <mat-sidenav-content role="region" class="content-region">
+    <mat-toolbar class="header">
+      <button type="button" aria-label="Toggle side menu" mat-icon-button (click)="drawerRight.toggle()"
+        *ngIf="isHandset$ | async">
+        <!-- <mat-icon aria-label="Side menu toggle icon">menu</mat-icon> -->
+        <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item class="menu-button" routerLink="Home" routerLinkActive="activeLink">Home</button>
+          <button mat-menu-item class="menu-button" routerLink="About" routerLinkActive="activeLink">About</button>
+          <button mat-menu-item class="menu-button" routerLink="Projects" routerLinkActive="activeLink">Projects</button>
+          <button mat-menu-item class="menu-button" routerLink="Resume" routerLinkActive="activeLink">Resume</button>
+          <button mat-menu-item class="menu-button" routerLink="Contact" routerLinkActive="activeLink">Contact</button>
+          <button mat-menu-item class="menu-button" (click)="toggleTheme();">
+            <mat-icon>invert_colors</mat-icon>
+          </button>
+        </mat-menu>
+      </button>
+      <span class="flex"></span>
+      <mat-toolbar [ngClass]="(isHandset$ | async) ? 'hide' : 'show'">
+        <button mat-button routerLink="Home" routerLinkActive="activeLink">Home</button>
+        <button mat-button routerLink="About" routerLinkActive="activeLink">About</button>
+        <button mat-button routerLink="Projects" routerLinkActive="activeLink">Projects</button>
+        <button mat-button routerLink="Resume" routerLinkActive="activeLink">Resume</button>
+        <button mat-button routerLink="Contact" routerLinkActive="activeLink">Contact</button>
+        <button mat-button  (click)="toggleTheme();">Theme</button>
+      </mat-toolbar>
+
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>

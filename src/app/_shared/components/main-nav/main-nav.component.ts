@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
 import { Observable } from 'rxjs';
 
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { map } from 'rxjs/operators';
+
 @Component({
   selector: 'app-main-nav',
   templateUrl: './main-nav.component.html',
@@ -10,9 +13,13 @@ import { Observable } from 'rxjs';
 export class MainNavComponent implements OnInit {
   isDarkTheme: Observable<boolean>;
   themeTitle = 'Dark';
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  .pipe(
+    map(result => result.matches)
+  );
 
   // tslint:disable-next-line: variable-name
-  constructor(private _theme: ThemeService) { }
+  constructor(private _theme: ThemeService, private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit() {
     this._theme.checkTheme();
